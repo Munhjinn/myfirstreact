@@ -2,7 +2,8 @@
 import './App.css';
 
 function App() {
-    <button onClick={Login} >Login</button>
+    <button onClick={Login} >Log in</button>;
+    <button onClick={Login} >Login with Google</button>
 
 }
 
