@@ -1,10 +1,18 @@
 
 import './App.css';
+import {Auth} from "./components/auth"
 
 function App() {
-    <button onClick={Login} >Log inn</button>;
-  
+    return (
+        <div className="App">
+            <Auth/>
+
+        <button></button>
+        </div>
+    );
+        
 
 }
+
 
 export default App;

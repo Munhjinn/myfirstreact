@@ -1,7 +1,19 @@
-export const Auth = () => {
+import {auth} from '../config/firebase'
+import {createUserWithEmailAndPassword} from 'firebase/auth'
 
-    return <div> 
+export const Auth = () => {
+    const [] = useState("")
+
+    const signIn = () => {
+
+
+    }
+
+    return (
+     <div> 
         <input placeholder="Email..."/>
         <input placeholder="Password..."/>
+        <button>Sign In</button>
     </div>
+    );
 }
