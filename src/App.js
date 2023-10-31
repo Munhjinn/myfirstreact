@@ -2,7 +2,7 @@
 import './App.css';
 
 function App() {
-    <button onClick={Login} >Login</button>;
+    <button onClick={Login} >Log inn</button>;
   
 
 }
