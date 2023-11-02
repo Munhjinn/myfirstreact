@@ -1,20 +1,19 @@
 
 import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth'
-// import { getAnalytics } from "firebase/analytics";
+import {getAuth} from "firebase/auth"
+
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAX6KZLGC_mfolMIo1HfZ2LGFHVkwzNCT8",
-  authDomain: "reactt-63c73.firebaseapp.com",
-  projectId: "reactt-63c73",
-  storageBucket: "reactt-63c73.appspot.com",
-  messagingSenderId: "699181563819",
-  appId: "1:699181563819:web:fa6b8f420eb7d40787dcee",
-  measurementId: "G-M13Q01EY6J"
+  apiKey: "AIzaSyCPu5MSW4jFN1i_a6k-ewBIttriDNgWfag",
+  authDomain: "firstreeact.firebaseapp.com",
+  projectId: "firstreeact",
+  storageBucket: "firstreeact.appspot.com",
+  messagingSenderId: "438752453193",
+  appId: "1:438752453193:web:f3b8ab8db0324a06359598",
+  measurementId: "G-7QLFBH19NQ"
 };
 
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
-
-// const analytics = getAnalytics(app);
+export const auth = getAuth(app);

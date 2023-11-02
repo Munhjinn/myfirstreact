@@ -2,12 +2,12 @@
 import './App.css';
 import {Auth} from "./components/auth"
 
-function App() {
+function App()  {
     return (
         <div className="App">
             <Auth/>
 
-        <button></button>
+       
         </div>
     );
         
