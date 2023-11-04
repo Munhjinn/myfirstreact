@@ -49,7 +49,7 @@ export const Auth = () => {
          type="password"
          onChange={(e) =>setPassword(e.target.value)}
          />
-        <button onClick={signIn}>Sign In</button>
+        <button onClick={signIn}>Sign in</button>
 
         <button onClick={signInWithGoogle}>Sign in with google</button>
 
