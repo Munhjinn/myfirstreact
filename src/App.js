@@ -28,12 +28,17 @@ function App()  {
     return (
         <div className="App">
             <Auth/>
+
+            <div>
+                <input placeholder="Movie title..." />
+                <input placeholder="Release date..." type="number" />
+                
+            </div>
             
             <div>
-
             { movieList.map((Movie)=> (
                 <div>
-                    <h1>{Movie.title}</h1>
+                    <h1 style={{color: Movie.receivedAnAward ? "blue" : "red"}} >{Movie.title}</h1>
                     <p> Date: {Movie.releaseDate} </p>
                 </div>
             ))}
