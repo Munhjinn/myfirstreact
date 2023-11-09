@@ -3,10 +3,17 @@ import { useState,useEffect } from 'react';
 import './App.css';
 import {Auth} from "./components/auth"
 import{db} from  "./config/firebase"
-import{getDocs, collection}  from 'firebase/firestore'
+import{getDocs, collection,addDoc,deleteDoc}  from 'firebase/firestore'
 
 function App()  {
     const [movieList, setMovieList] = useState([])
+
+    // NEw movie staties
+    const [newMovieTitle, setNewMovieTitle] = useState("")
+    const [newReleaseDate, setNewReleaseDate] = useState(0)
+    const [isnewMovieAward, setIsNewMovieAward] = useState(false)
+
+
     const moviesCollectionRef = collection(db, "Movie")
 
     useEffect(() => {
@@ -23,18 +30,47 @@ function App()  {
 
     }
     getMovieList();
+    
 }, [])
+
+const onSubmitMovie = async () => {
+    try{
+
+    await addDoc(moviesCollectionRef,{
+        title: newMovieTitle, 
+        releaseDate: newReleaseDate,
+        award: isnewMovieAward,
+
+    }) ;
+
+    const deleteMovie = async (id) => {
+        const movieDoc = doc(db, "Movie", id)
+        await deleteDoc();
+    };
+            
+} catch(err) {
+    console.error(err)
+}
+
+}
 
     return (
         <div className="App">
             <Auth/>
 
             <div>
-                <input placeholder="Movie title..." />
-                <input placeholder="Release date..." type="number" />
-                <input type="checkbox " />
+                <input
+                    placeholder="Movie title..." onChange={(e) => setNewMovieTitle(e.target.value)}/>
+                <input
+                    placeholder="Release date..."  
+                    type="number"
+                    onChange={(e) => setNewReleaseDate(e.target.value)} />
+                <input 
+                    type="checkbox "
+                    // checked={isnewMovieAward} 
+                    onChange={(e) => setIsNewMovieAward(e.target.checked)}  />
                 <label>Received an Award</label>
-                <button> Aublit Movie </button>
+                <button onCLick={onSubmitMovie} > Submit Movie </button>
 
                 
             </div>
@@ -47,6 +83,8 @@ function App()  {
                 </div>
             ))}
 
+            <button onClick={() => deleteMovie(Movie.id)}> Delete Movie</button>
+ 
         </div>
         </div>
 
