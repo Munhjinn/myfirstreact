@@ -70,7 +70,7 @@ const onSubmitMovie = async () => {
                     // checked={isnewMovieAward} 
                     onChange={(e) => setIsNewMovieAward(e.target.checked)}  />
                 <label>Received an Award</label>
-                <button onCLick={onSubmitMovie} > Submit Movie </button>
+                <button onCLick={onSubmitMovie} > Submit Movie.. </button>
 
                 
             </div>
