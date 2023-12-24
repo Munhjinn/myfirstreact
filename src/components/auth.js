@@ -52,7 +52,7 @@ export const Auth = () => {
          />
         <button onClick={signIn}>Sign In</button>
 
-        <button onClick={signInWithGoogle}>Sign in withhs google</button>
+        <button onClick={signInWithGoogle}>Sign in with google</button>
 
         <button onClick={logout}>Log out</button>
     </div>
