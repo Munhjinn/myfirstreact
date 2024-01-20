@@ -52,7 +52,7 @@ export const Auth = () => {
          />
         <button onClick={signIn}>Sign In</button>
 
-        <button onClick={signInWithGoogle}>Sign in wih oogle</button>
+        <button onClick={signInWithGoogle}>Sign in wi oogle</button>
 
         <button onClick={logout}>Log out</button>
     </div>
